@@ -1,0 +1,485 @@
+@font-face {
+    font-family: neu;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+    font-family: neu;
+    font-weight: 100;
+    src: url(./NeueHaasDisplayLight.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Fix typo here */
+    font-family: 'neu';
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    /* background-color: #121010; */
+    position: relative;
+    z-index: 10;
+}
+#page1 {
+    min-height: 100vh ;
+    width: 100%;
+    background-color: #b49fff;
+    position: relative;
+    /* Hide horizontal overflow */
+    /* overflow-y: auto;   Remove this line */
+    padding: 0 2vw;
+    overflow: hidden;
+}
+
+
+nav {
+    padding: 2vw 2vw;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-part2 {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1vw; /* Reduced gap */
+}
+/* 
+#nav-part2 h4 {
+    padding: 10px 20px;
+    border: 1px solid #0000003c;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000bb;
+    transition: all ease 0.4s;
+    position: relative;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+#nav-part2 h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+#nav-part2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+#nav-part2 h4 a {
+    color: #000000bb;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+
+#nav-part2 h4:hover a {
+    color: #fff;
+}
+ */
+ #nav-part2 h1{
+    padding: 10px 20px;
+    border: 1px solid #0000003c;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000bb;
+    transition: all ease 0.4s;
+    position: relative;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+#nav-part2 h1::after {
+    
+    content: ""; /*  if content nahi likhuga to nahi chalega background mai black colour */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+  
+}
+
+#nav-part2 h1:hover::after{
+    bottom: 0;
+    border-radius: 0;
+}
+
+#nav-part2 h1 a{
+    color: #000000bb;
+    position:relative;
+    z-index: 9;
+    text-decoration: none;
+
+}
+#nav-part2 h1:hover a{
+    color: #fff;
+}
+
+#center {
+    border: 1px solid #0000003c;
+    border-radius: 20px;
+    height: auto; /* Change to auto or adjust as needed */
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #1005053c;
+    padding-bottom: 2.5vw;
+    background-color: rgb(248, 238, 238);
+    padding: 1vw;
+    transition: all ease 0.5s;
+}
+
+#left h3{
+    width: 30vw;
+    font-size: 1.8vw;
+}
+#right h1{
+    font-size: 10vh;
+    line-height: 7vw;
+}
+#right h1:hover{
+    font-size: 12vh;
+    line-height: 7vw;
+    transition: all ease 0.3s;
+    color: rgb(211, 11, 11);
+}
+
+#imgg img{position: relative;
+    border-radius: 30px;
+    margin-top: 4vw;
+width: 100%;
+height: 150vh;
+}
+
+#hero-shape {
+    position: absolute;
+    width: 46vw;
+    height: 46vw;
+    right: 0;
+    top: 75vh;
+}
+
+#hero-1 {
+    background-color: #ffe4e1;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(10px);
+    position: absolute;
+}
+
+#hero-2 {
+    background: linear-gradient(#ffe4e1, #121010);
+
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(25px);
+}
+
+#hero-3 {
+    background: linear-gradient(#ffe4e1, #1b141a);
+    height: 30vw;
+    position: absolute;
+    width: 30vw;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime1 {
+    from {
+        transform: translate(55%, -3%);
+    }
+
+    to {
+        transform: translate(0%, 10%);
+    }
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -5%);
+    }
+
+    to {
+        transform: translate(-20%, 30%);
+    }
+}
+
+#page2 {
+    min-height: 90vh;
+    width: 100%;
+    background-color: #EFEAE3;
+   
+    position: relative;
+}
+
+#moving-text {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moving-text h1 {
+    font-size: 9vw;
+    /* background-color: lightblue; */
+    display: inline-block;
+}
+
+#gola {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #FE320A;
+    margin: 1vw 2vw;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#page2-bottom{
+    height: 70vh;
+    width: 100%;
+    background-color:  rgb(248, 238, 238);
+    padding: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+#page2-bottom h1{
+    font-size: 4vh;
+    width: 50%;
+    line-height: 4vw;
+}
+
+#bottom-part2{
+    width: 20%;
+   /*  background-color: #FE320A; */
+}
+
+#bottom-part2 img{
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+#bottom-part2 p{
+    font-weight: 100;
+    padding-top: 1vw;
+
+}
+
+#page3{
+   min-height: 100vh;
+    width: 100%;
+    background-color:  rgb(248, 238, 238);
+    padding: 4vw 0;
+}
+
+.elem{
+    height: 270px;
+    width: 100%;
+    position: relative;
+    background-color: rgb(248, 238, 238);
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+   
+    border-bottom: 0.2px solid #121010;
+    overflow: hidden;
+}
+
+.elem h2{
+    font-size: 2vw;
+    position: relative;
+    color: #ee9ce1;
+
+}
+
+.elem .overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #ee9ce1;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.3s;
+}
+
+.elem:hover .overlay{
+    top: 0;
+    
+}
+.elem:hover h2{
+    color: rgb(245, 249, 249);
+}
+
+ 
+#fixed-image {
+
+    height: 30vw;
+    width: 34vw;
+   /*  background-color: #ee9ce1; */
+
+    border-radius: 15px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+} 
+
+#page4 {
+    height: 70vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 10vw 2vw;
+}
+#content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw; 
+}
+#content h4{
+    font-size: 27vh;
+
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.swiper-slide {
+    position: relative;
+    height: 100%;
+    width: 10%;
+    background-color: #ee9ce1;
+    border-left: 1px solid #b11a1a;
+    padding: 0 2vw;
+}
+
+
+
+#page5{
+    height: 100vh;
+    width: 100%;
+}
+
+#footer{
+    width: 100%;
+    height:100vh;
+    position: fixed;
+    z-index: 9;
+    background-color: #FE320A;
+    color: #fff;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    
+}
+#footer h1{
+    
+    width: 100%;
+    font-size: 13vw;
+}
+
+
+  /* .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #221c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-slide {
+    width: 60%;
+  }
+
+  .swiper-slide:nth-child(2n) {
+    width: 40%;
+  }
+
+  .swiper-slide:nth-child(3n) {
+    width: 20%;
+  } */
+/* .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    width: 30%;
+    border-left: 1px solid #e78f8f;
+    padding: 0 2vw;
+} */
